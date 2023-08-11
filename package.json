@@ -14,7 +14,7 @@
     "utilities",
     "designbycode"
   ],
-  "type": "module",
+  "type": "commonjs",
   "main": "./dist/index.umd.cjs",
   "exports": {
     ".": {
