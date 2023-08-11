@@ -6,7 +6,7 @@ import dts from "vite-plugin-dts"
 export default defineConfig({
   test: {
     coverage: {
-      reporter: ["text", "json-summary", "json"],
+      reporter: ["text", "json"],
       lines: 60,
       branches: 60,
       functions: 60,
