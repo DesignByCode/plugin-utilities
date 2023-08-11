@@ -5,7 +5,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [ 18 ]
+        
     permissions:
       # Required to check out the code
       contents: read
@@ -14,10 +17,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: 'Install Node'
-        uses: pnpm/setup-node@v2
+      - uses: pnpm/action-setup@v2
         with:
           version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
       - name: 'Install Deps'
         run: pnpm install --frozen-lockfile
       - name: 'Test'
