@@ -28,8 +28,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: 'Test'
         run: npx vitest
-      - name: 'Test coverage'
-        run: npx vitest --coverage
+      #      - name: 'Test coverage'
+      #        run: npx vitest --coverage
       - name: 'Report Coverage'
         if: always() # Also generate the report if tests are failing
         uses: davelosert/vitest-coverage-report-action@v2
