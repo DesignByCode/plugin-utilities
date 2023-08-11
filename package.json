@@ -29,7 +29,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "release": "release-it",
-    "coverage": "vitest run --coverage",
+    "coverage": "vitest --coverage",
     "dev": "vite",
     "test": "vitest"
   },

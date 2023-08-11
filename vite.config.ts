@@ -1,12 +1,11 @@
-import {resolve} from "path"
-import {defineConfig} from "vitest/config"
+import { resolve } from "path"
+import { defineConfig } from "vitest/config"
 import dts from "vite-plugin-dts"
 
-/** @type {import('vite').UserConfig} */
 export default defineConfig({
   test: {
     coverage: {
-      reporter: ["text"],
+      reporter: ["text", "json-summary"],
       lines: 60,
       branches: 60,
       functions: 60,
